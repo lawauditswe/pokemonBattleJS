@@ -64,4 +64,4 @@ class Pokemon {
 	}
 }
 
-let rillaboom = new Pokemon();
+// let rillaboom = new Pokemon();
