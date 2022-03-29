@@ -61,7 +61,18 @@ class Pokemon {
 		this.move3 = move3;
 		this.move4 = move4;
 		this.statusCondition = statusCondition;
+		this.hpStat =
+			110 + 2 * this.baseHP + this.hpIVs + Math.floor(this.hpEVs / 4);
+		this.atkStat =
+			2 * this.baseAtk + 5 + this.atkIVs + Math.floor(this.atkEVs / 4);
+		this.defStat =
+			2 * this.baseDef + 5 + this.defIVs + Math.floor(this.defEVs / 4);
+		this.spaStat =
+			2 * this.baseSpA + 5 + this.spaIVs + Math.floor(this.spaEVs / 4);
+		this.spdStat =
+			2 * this.baseSpD + 5 + this.spdIVs + Math.floor(this.spdEVs / 4);
+		this.speStat =
+			2 * this.baseSpe + 5 + this.speIVs + Math.floor(this.speEVs / 4);
+		this.moveset = [move1, move2, move3, move4];
 	}
 }
-
-let rillaboom = new Pokemon();
