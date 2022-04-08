@@ -76,3 +76,5 @@ class Pokemon {
 		this.moveset = [move1, move2, move3, move4];
 	}
 }
+
+export default Pokemon;
