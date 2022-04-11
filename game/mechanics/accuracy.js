@@ -3,3 +3,5 @@ const accuracy = (move) => {
 	if (miss > move.accuracy) return 0;
 	return 1;
 };
+
+export default accuracy;

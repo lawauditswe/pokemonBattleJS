@@ -1,4 +1,4 @@
-class Move {
+class moveClass {
 	constructor(name, typing, category, power, accuracy, pp) {
 		this.name = name;
 		this.typing = typing;
@@ -8,3 +8,5 @@ class Move {
 		this.pp = pp;
 	}
 }
+
+export default moveClass;
