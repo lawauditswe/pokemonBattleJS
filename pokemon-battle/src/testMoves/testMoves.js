@@ -8,3 +8,12 @@ export const thunderbolt = new Move(
 	100,
 	24
 );
+
+export const waterfall = new Move(
+	'Waterfall',
+	'water',
+	'physical',
+	80,
+	100,
+	24
+);
