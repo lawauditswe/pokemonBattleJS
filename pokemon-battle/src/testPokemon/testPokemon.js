@@ -1,5 +1,5 @@
 import Pokemon from '../gameClasses/pokemonClass';
-import { thunderbolt } from '../testMoves/testMoves';
+import { thunderbolt, waterfall } from '../testMoves/testMoves';
 
 export const pikachu = new Pokemon(
 	'Pikachu',
@@ -35,7 +35,7 @@ export const dratini = new Pokemon(
 	'quiet',
 	'shed skin',
 	'dragon',
-	'waterfall',
+	waterfall,
 	41,
 	64,
 	45,
