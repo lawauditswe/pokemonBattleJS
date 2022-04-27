@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Button = ({ name }) => {
+const Button = ({ name, move }) => {
+	
 	return <button>{name}</button>;
 };
 

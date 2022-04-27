@@ -8,11 +8,11 @@ const attack = (attackingPokemon, targetPokemon, move) => {
 	let offensiveStat;
 	let defensiveStat;
 	if (move.category === 'physical') {
-		const offensiveStat = attackingPokemon.atkStat;
-		const defensiveStat = targetPokemon.defStat;
+		offensiveStat = attackingPokemon.atkStat;
+		defensiveStat = targetPokemon.defStat;
 	} else if (move.category === 'special') {
-		const offensiveStat = attackingPokemon.spaStat;
-		const defensiveStat = targetPokemon.spdStat;
+		offensiveStat = attackingPokemon.spaStat;
+		defensiveStat = targetPokemon.spdStat;
 	}
 
 	let damage =
