@@ -133,6 +133,95 @@ const effectiveness = (move, targetPokemon) => {
 			) {
 				effectiveness *= 2;
 			}
+		} else if (move.typing === 'ghost') {
+			if (pokemonTyping[i] === 'normal') {
+				effectiveness *= 0;
+			} else if (pokemonTyping[i] === 'dark') {
+				effectiveness *= 0.5;
+			} else if (
+				pokemonTyping[i] === 'ghost' ||
+				pokemonTyping[i] === 'psychic'
+			) {
+				effectiveness *= 2;
+			}
+		} else if (move.typing === 'steel') {
+			if (
+				pokemonTyping[i] === 'steel' ||
+				pokemonTyping[i] === 'fire' ||
+				pokemonTyping[i] === 'water' ||
+				pokemonTyping[i] === 'electric'
+			) {
+				effectiveness *= 0.5;
+			} else if (
+				pokemonTyping[i] === 'rock' ||
+				pokemonTyping[i] === 'ice' ||
+				pokemonTyping[i] === 'fairy'
+			) {
+				effectiveness *= 2;
+			}
+		} else if (move.typing === 'fire') {
+			if (
+				pokemonTyping[i] === 'rock' ||
+				pokemonTyping[i] === 'water' ||
+				pokemonTyping[i] === 'fire' ||
+				pokemonTyping[i] === 'dragon'
+			) {
+				effectiveness *= 0.5;
+			} else if (
+				pokemonTyping[i] === 'bug' ||
+				pokemonTyping[i] === 'steel' ||
+				pokemonTyping[i] === 'grass' ||
+				pokemonTyping[i] === 'ice'
+			) {
+				effectiveness *= 2;
+			}
+		} else if (move.typing === 'grass') {
+			if (
+				pokemonTyping[i] === 'flying' ||
+				pokemonTyping[i] === 'poison' ||
+				pokemonTyping[i] === 'steel' ||
+				pokemonTyping[i] === 'bug' ||
+				pokemonTyping[i] === 'fire' ||
+				pokemonTyping[i] === 'grass' ||
+				pokemonTyping[i] === 'dragon'
+			) {
+				effectiveness *= 0.5;
+			} else if (
+				pokemonTyping[i] === 'ground' ||
+				pokemonTyping[i] === 'rock' ||
+				pokemonTyping[i] === 'water'
+			) {
+				effectiveness *= 2;
+			}
+		} else if (move.typing === 'electric') {
+			if (pokemonTyping[i] === 'ground') {
+				effectiveness *= 0;
+			} else if (
+				pokemonTyping[i] === 'grass' ||
+				pokemonTyping[i] === 'electric' ||
+				pokemonTyping[i] === 'dragon'
+			) {
+				effectiveness *= 0.5;
+			} else if (
+				pokemonTyping[i] === 'flying' ||
+				pokemonTyping[i] === 'water'
+			) {
+				effectiveness *= 2;
+			}
+		} else if (move.typing === 'psychic') {
+			if (pokemonTyping[i] === 'dark') {
+				effectiveness *= 0;
+			} else if (
+				pokemonTyping[i] === 'steel' ||
+				pokemonTyping[i] === 'psychic'
+			) {
+				effectiveness *= 0.5;
+			} else if (
+				pokemonTyping[i] === 'fighting' ||
+				pokemonTyping[i] === 'poison'
+			) {
+				effectiveness *= 2;
+			}
 		}
 	}
 };
