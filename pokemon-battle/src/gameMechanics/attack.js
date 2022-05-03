@@ -1,6 +1,7 @@
 import criticalHit from './criticalHit';
 import randomNumber from './randomNumber';
 import stab from './stab';
+import effectiveness from './effectiveness';
 
 const attack = (attackingPokemon, targetPokemon, move) => {
 	const level = attackingPokemon.level;
