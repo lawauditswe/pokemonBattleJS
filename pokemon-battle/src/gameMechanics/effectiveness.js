@@ -222,6 +222,57 @@ const effectiveness = (move, targetPokemon) => {
 			) {
 				effectiveness *= 2;
 			}
+		} else if (move.typing === 'ice') {
+			if (
+				pokemonTyping[i] === 'steel' ||
+				pokemonTyping[i] === 'fire' ||
+				pokemonTyping[i] === 'water' ||
+				pokemonTyping[i] === 'ice'
+			) {
+				effectiveness *= 0.5;
+			} else if (
+				pokemonTyping[i] === 'flying' ||
+				pokemonTyping[i] === 'ground' ||
+				pokemonTyping[i] === 'grass' ||
+				pokemonTyping[i] === 'dragon'
+			) {
+				effectiveness *= 2;
+			}
+		} else if (move.typing === 'dragon') {
+			if (pokemonTyping[i] === 'fairy') {
+				effectiveness *= 0;
+			} else if (pokemonTyping[i] === 'steel') {
+				effectiveness *= 0.5;
+			} else if (pokemonTyping[i] === 'dragon') {
+				effectiveness *= 2;
+			}
+		} else if (move.typing === 'dark') {
+			if (
+				pokemonTyping[i] === 'fighting' ||
+				pokemonTyping[i] === 'dark' ||
+				pokemonTyping[i] === 'fairy'
+			) {
+				effectiveness *= 0.5;
+			} else if (
+				pokemonTyping[i] === 'ghost' ||
+				pokemonTyping[i] === 'psychic'
+			) {
+				effectiveness *= 2;
+			}
+		} else if (move.typing === 'fairy') {
+			if (
+				pokemonTyping[i] === 'poison' ||
+				pokemonTyping[i] === 'steel' ||
+				pokemonTyping[i] === 'fire'
+			) {
+				effectiveness *= 0.5;
+			} else if (
+				pokemonTyping[i] === 'fighting' ||
+				pokemonTyping[i] === 'dragon' ||
+				pokemonTyping[i] === 'dark'
+			) {
+				effectiveness *= 2;
+			}
 		}
 	}
 };
