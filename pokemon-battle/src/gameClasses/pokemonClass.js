@@ -29,7 +29,8 @@ class Pokemon {
 		move2,
 		move3,
 		move4,
-		statusCondition
+		statusCondition,
+		dexNumber
 	) {
 		this.name = name;
 		this.nature = nature;
@@ -61,6 +62,7 @@ class Pokemon {
 		this.move3 = move3;
 		this.move4 = move4;
 		this.statusCondition = statusCondition;
+		this.dexNumber = dexNumber;
 		this.hpStat =
 			110 + 2 * this.baseHP + this.hpIVs + Math.floor(this.hpEVs / 4);
 		this.atkStat =

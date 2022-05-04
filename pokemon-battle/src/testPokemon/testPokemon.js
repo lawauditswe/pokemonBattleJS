@@ -27,7 +27,8 @@ export const pikachu = new Pokemon(
 	31,
 	'Male',
 	100,
-	null
+	null,
+	25
 );
 
 export const dratini = new Pokemon(
@@ -56,7 +57,8 @@ export const dratini = new Pokemon(
 	31,
 	'Female',
 	100,
-	null
+	null,
+	147
 );
 
 // pokemon moves should be in an array. instead of in the pokemon class i think.
