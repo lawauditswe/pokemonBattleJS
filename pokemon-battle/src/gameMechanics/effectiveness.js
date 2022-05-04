@@ -1,5 +1,5 @@
-import { pikachu, dratini } from '../../testPokemon/testPokemon';
-import { thunderbolt, waterfall } from '../../testMoves/testMoves';
+import { pikachu, dratini } from '../testPokemon/testPokemon';
+import { thunderbolt, waterfall } from '../testMoves/testMoves';
 
 const effectiveness = (move, targetPokemon) => {
 	let pokemonTyping;
