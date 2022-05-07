@@ -9,6 +9,8 @@ const effectiveness = (move, targetPokemon) => {
 		pokemonTyping = [targetPokemon.type1];
 	}
 
+	console.log(pokemonTyping);
+
 	let effectiveness = 1;
 
 	for (let i = 0; i < pokemonTyping.length; i++) {
@@ -275,6 +277,8 @@ const effectiveness = (move, targetPokemon) => {
 			}
 		}
 	}
+	console.log(effectiveness);
+	return effectiveness;
 };
 
 export default effectiveness;

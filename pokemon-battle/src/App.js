@@ -12,14 +12,19 @@ function App() {
 	const [yourPokemon, setYourPokemon] = useState(pikachu);
 	const [oppoPokemon, setOppoPokemon] = useState(dratini);
 
-	const [yourHP, setyourHp] = useState(pikachu.hpStat);
-	const [oppoHP, setOppoHp] = useState(dratini.hpStat);
+	const [yourHP, setyourHP] = useState(pikachu.hpStat);
+	const [oppoHP, setOppoHP] = useState(dratini.hpStat);
 
 	const yourPokemonImage =
 		'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png';
 
 	const oppoPokemonImage =
 		'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png';
+
+	const reduceOppoHP = () => {
+		const damage = attack(pikachu, dratini, thunderbolt);
+		setOppoHP(oppoHP - damage);
+	};
 
 	// const fetchPokemonData = () => {
 	// 	axios
@@ -43,17 +48,15 @@ function App() {
 					<img src={oppoPokemonImage} alt='' />
 				</div>
 				<p>
-					{dratini.name} has {dratini.hpStat} HP.
+					{dratini.name} has {oppoHP} HP.
 				</p>
-				<Button
+				{/* <Button
 					name='Thunderbolt'
-					move={thunderbolt}
-					onClick={() => {
-						attack();
-					}}
-				/>
+					func={reduceOppoHP}
+				/> */}
+				<button onClick={() => setOppoHP(reduceOppoHP)}>Thunderbolt</button>
 				<p></p>
-				<Button name='Waterfall' move={waterfall} />
+				{/* <Button name='Waterfall' move={waterfall} /> */}
 			</div>
 		</div>
 	);
